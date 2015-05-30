@@ -9,7 +9,8 @@ services:
 # - REDIS_PORT_6379_TCP_PORT=6379
 
 script:
-  - export PATH=${PATH}:/home/ubuntu/virtualenv/python2.7
+  - export PATH=/home/ubuntu/virtualenv/python2.7:${PATH}
+  - ls /home/ubuntu/virtualenv/python2.7
   - pip install -r requirements.txt
   - mkdir -p daocloud/testresults
   - mkdir -p daocloud/codecoverage
