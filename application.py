@@ -20,6 +20,7 @@ class Storage():
       host = os.getenv('REDIS_PORT_6379_TCP_ADDR'),
       port = int(os.getenv('REDIS_PORT_6379_TCP_PORT')),
       password = ''
+    )
 
   def populate(self):
     self.redis.set('score', '1234')
